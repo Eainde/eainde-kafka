@@ -1,0 +1,25 @@
+{
+  "namespace": "com.eainde.kafka",
+  "type": "record",
+  "name": "OrderRecord",
+  "fields": [
+    {
+      "name":  "description",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "amount",
+      "type": "double"
+    },
+    {
+      "name": "noOfItems",
+      "type": "int"
+    }
+  ],
+  "default": "null"
+}
+
