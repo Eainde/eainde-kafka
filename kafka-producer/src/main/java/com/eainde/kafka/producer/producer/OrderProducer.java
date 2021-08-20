@@ -41,9 +41,9 @@ public class OrderProducer {
                   .build());
       LOGGER.info(
           "Order record(Id: {}, Description: {}) has been pushed to the topic {}.",
-          orderTopicName,
           record.getId(),
-          record.getDescription());
+          record.getDescription(),
+          orderTopicName);
 
     } catch (Exception e) {
       LOGGER.error("Error in pushing Order record. ", e);
