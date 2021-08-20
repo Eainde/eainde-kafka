@@ -18,10 +18,11 @@
         <maven.compiler.target>11</maven.compiler.target>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
         <spring-boot.version>2.5.2</spring-boot.version>
-        <confluent.version>6.2.0</confluent.version>
+        <confluent.version>5.2.1</confluent.version>
         <avro.version>1.10.2</avro.version>
         <avro-converter.version>1.0.1</avro-converter.version>
         <spring-cloud-stream-schema.version>2.2.1.RELEASE</spring-cloud-stream-schema.version>
+        <spring-plugin-core.version>2.0.0.RELEASE</spring-plugin-core.version>
     </properties>
 
     <dependencyManagement>
@@ -55,6 +56,16 @@
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>org.springframework.plugin</groupId>
+            <artifactId>spring-plugin-core</artifactId>
+            <version>${spring-plugin-core.version}</version>
+        </dependency>-->
 
         <!-- Avro -->
         <dependency>
@@ -93,6 +104,10 @@
             <artifactId>spring-cloud-stream</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-json</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-streams-avro-serde</artifactId>
             <version>${confluent.version}</version>
@@ -113,6 +128,27 @@
             <artifactId>kafka-schema-registry-client</artifactId>
             <version>${confluent.version}</version>
         </dependency>
+        <!--<dependency>
+            <groupId>net.minidev</groupId>
+            <artifactId>json-smart</artifactId>
+            <version>2.3.0.redhat-00001</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.12.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.2</version>
+        </dependency>
+
     </dependencies>
 
 </project>
