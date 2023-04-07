@@ -1,17 +1,14 @@
 package com.eainde.kafka.producer;
 
-import com.eainde.kafka.producer.channel.OrderChannel;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.schema.client.ConfluentSchemaRegistryClient;
 import org.springframework.cloud.stream.schema.client.EnableSchemaRegistryClient;
 import org.springframework.cloud.stream.schema.client.SchemaRegistryClient;
 
 @SpringBootApplication
-@EnableBinding({OrderChannel.class})
+// @EnableBinding({OrderChannel.class})
 @EnableSchemaRegistryClient
 public class Application {
   public static void main(String[] args) {
